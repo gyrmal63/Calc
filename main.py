@@ -1,3 +1,4 @@
+from os import system, name
 import operator
 
 operations = {'+': operator.add, '-': operator.sub, '*': operator.mul, '/': operator.truediv}
@@ -26,8 +27,14 @@ def inputOperation():
         print("Invalid input.")
         inputOperation()
 
+def clearScreen():
+    if name == 'nt': system('cls')
+    else: system('clear')
+
+
 def rmZeros(i): return ('%f' % i).rstrip('0').rstrip('.')
 
+clearScreen()
 inputNumbers(1)
 inputOperation()
 inputNumbers(2)
