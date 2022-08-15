@@ -4,8 +4,8 @@ import operator
 operations = {'+': operator.add, '-': operator.sub, '*': operator.mul, '/': operator.truediv}
 
 firstNumber = float
-selectedOperator = str
 secondNumber = float
+selectedOperator = str
 
 def inputNumbers(i):
     global firstNumber, secondNumber
@@ -24,13 +24,12 @@ def inputOperation():
     global selectedOperator
     selectedOperator = input("Operation? ")
     if not selectedOperator in operations:
-        print("Invalid input.")
+        print("Invalid input. Use +, -, *, or /")
         inputOperation()
 
 def clearScreen():
     if name == 'nt': system('cls')
     else: system('clear')
-
 
 def rmZeros(i): return ('%f' % i).rstrip('0').rstrip('.')
 
