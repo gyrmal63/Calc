@@ -3,10 +3,6 @@ import operator
 
 operations = {'+': operator.add, '-': operator.sub, '*': operator.mul, '/': operator.truediv}
 
-firstNumber = float
-secondNumber = float
-selectedOperator = str
-
 def inputNumbers(i):
     global firstNumber, secondNumber
     if i == 1:
