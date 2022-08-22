@@ -29,9 +29,15 @@ def clearScreen():
 
 def rmZeros(i): return ('%f' % i).rstrip('0').rstrip('.')
 
-clearScreen()
-inputNumbers(1)
-inputOperation()
-inputNumbers(2)
+def math():
+    clearScreen()
 
-print("%s %s %s = %s" % (rmZeros(firstNumber), selectedOperator, rmZeros(secondNumber), rmZeros(operations[selectedOperator](firstNumber, secondNumber))))
+    inputNumbers(1)
+    inputOperation()
+    inputNumbers(2)
+
+    print("%s %s %s = %s" % (rmZeros(firstNumber), selectedOperator, rmZeros(secondNumber), rmZeros(operations[selectedOperator](firstNumber, secondNumber))))
+
+    if input("Continue? (Y/N) ").lower() == 'y':
+        math()
+math()
